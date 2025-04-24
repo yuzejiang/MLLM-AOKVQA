@@ -1,0 +1,19 @@
+# Base dataset paths (same as above)
+aokvqa_dir: datasets/aokvqa/
+coco_dir:    datasets/coco/
+
+# Model choices
+vision_model: Salesforce/blip2-flan-t5-xl
+text_model:   bert-base-uncased
+
+# Training hyperparameters
+batch_size:       2
+learning_rate:    1e-4
+num_epochs:       100
+num_labels:       4
+
+# Attention supervision weight (λ in total loss = VQA_loss + λ * Attn_loss)
+attn_loss_weight: 1.0
+
+# Checkpoint I/O
+checkpoint_path: checkpoint_supervised_epoch25.pt
